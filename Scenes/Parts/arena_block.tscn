@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://tov5ihlkglhk"]
+
+[node name="Arena_Block" type="Polygon2D"]
+color = Color(0.1764706, 0.17254902, 0.18039216, 1)
+offset = Vector2(-961, -258)
+polygon = PackedVector2Array(1050, 153, 1085, 382, 991, 384, 972, 268, 920, 219, 854, 217, 845, 139)

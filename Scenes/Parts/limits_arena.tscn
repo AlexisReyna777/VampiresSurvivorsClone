@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://k5swxbx67yd"]
+
+[node name="Limits_Arena" type="Polygon2D"]
+scale = Vector2(0.9771222, 1)
+color = Color(0.1764706, 0.17254902, 0.18039216, 1)
+offset = Vector2(-542.40906, -321.99997)
+invert_enabled = true
+invert_border = 1113.4
+polygon = PackedVector2Array(-298.61554, -151.99998, 542.6303, -344.99997, 1433, -142, 1601.8632, 345.99997, 1433, 818, 552.86444, 1032.9999, -305.77942, 814.99994, -496.1343, 334.99997)

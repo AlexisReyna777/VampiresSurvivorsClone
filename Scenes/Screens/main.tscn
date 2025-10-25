@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyvjeu7j5wrkd"]
+
+[ext_resource type="PackedScene" uid="uid://4gafysqnjytj" path="res://Scenes/Parts/player.tscn" id="1_382gn"]
+[ext_resource type="PackedScene" uid="uid://bo233jc4of80j" path="res://Scenes/Parts/boulder.tscn" id="2_n8gl3"]
+[ext_resource type="PackedScene" uid="uid://k5swxbx67yd" path="res://Scenes/Parts/limits_arena.tscn" id="3_r04gs"]
+[ext_resource type="PackedScene" uid="uid://tov5ihlkglhk" path="res://Scenes/Parts/arena_block.tscn" id="4_2c4sm"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_382gn")]
+position = Vector2(638, 79)
+
+[node name="Miscellaneus" type="Node2D" parent="."]
+
+[node name="Boulder" parent="Miscellaneus" instance=ExtResource("2_n8gl3")]
+position = Vector2(1, 0)
+offset = Vector2(0, 343)
+
+[node name="Boulder2" parent="Miscellaneus" instance=ExtResource("2_n8gl3")]
+position = Vector2(402, 129)
+
+[node name="Boulder3" parent="Miscellaneus" instance=ExtResource("2_n8gl3")]
+position = Vector2(396, 353)
+
+[node name="Boulder4" parent="Miscellaneus" instance=ExtResource("2_n8gl3")]
+position = Vector2(741, 259)
+
+[node name="Limits_Arena" parent="Miscellaneus" instance=ExtResource("3_r04gs")]
+position = Vector2(610, 286)
+
+[node name="Arena_Block" parent="Miscellaneus" instance=ExtResource("4_2c4sm")]
+position = Vector2(1081, 38)
+
+[node name="Arena_Block2" parent="Miscellaneus" instance=ExtResource("4_2c4sm")]
+position = Vector2(1122, 489)
+scale = Vector2(1, -1)
+
+[node name="Arena_Block3" parent="Miscellaneus" instance=ExtResource("4_2c4sm")]
+position = Vector2(173, 22)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Arena_Block4" parent="Miscellaneus" instance=ExtResource("4_2c4sm")]
+position = Vector2(151, 496)
+rotation = 3.1415927

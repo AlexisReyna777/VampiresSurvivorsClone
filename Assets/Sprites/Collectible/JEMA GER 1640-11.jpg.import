@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2r1q8u5y3nk0"
-path="res://.godot/imported/tile_0001.png-508f74c6454ccc585f621bc8f08e8152.ctex"
+uid="uid://b3fjwblm1wvc6"
+path="res://.godot/imported/JEMA GER 1640-11.jpg-71f6628d3b0b75e3acd870b3a5b36663.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/tile_0001.png"
-dest_files=["res://.godot/imported/tile_0001.png-508f74c6454ccc585f621bc8f08e8152.ctex"]
+source_file="res://Assets/Sprites/Collectible/JEMA GER 1640-11.jpg"
+dest_files=["res://.godot/imported/JEMA GER 1640-11.jpg-71f6628d3b0b75e3acd870b3a5b36663.ctex"]
 
 [params]
 

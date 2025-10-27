@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://bo233jc4of80j"]
 
-[node name="Boulder" type="Polygon2D"]
-color = Color(0.3137255, 0.30980393, 0.31764707, 1)
-offset = Vector2(-605, -154)
-polygon = PackedVector2Array(570, 145, 609, 126, 640, 145, 656, 173, 555, 173)
+[node name="Node2D" type="Polygon2D"]
+scale = Vector2(3.5, 3.5)
+color = Color(0.41987455, 0.14153838, 0.057710454, 1)
+polygon = PackedVector2Array(0, -9, 7, -6, 13, -2, 15, 5, -15, 5, -13, -2, -7, -5, -5, -8)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-5, -8, 0, -9, 13, -2, 15, 5, -15, 5, -13, -2, -7, -5)

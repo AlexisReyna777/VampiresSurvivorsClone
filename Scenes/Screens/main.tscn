@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://cyvjeu7j5wrkd"]
+[gd_scene load_steps=7 format=3 uid="uid://cyvjeu7j5wrkd"]
 
 [ext_resource type="PackedScene" uid="uid://4gafysqnjytj" path="res://Scenes/Parts/player.tscn" id="1_382gn"]
 [ext_resource type="PackedScene" uid="uid://bo233jc4of80j" path="res://Scenes/Parts/boulder.tscn" id="2_n8gl3"]
 [ext_resource type="PackedScene" uid="uid://k5swxbx67yd" path="res://Scenes/Parts/limits_arena.tscn" id="3_r04gs"]
 [ext_resource type="PackedScene" uid="uid://tov5ihlkglhk" path="res://Scenes/Parts/arena_block.tscn" id="4_2c4sm"]
+[ext_resource type="PackedScene" uid="uid://bmj2s2me7bflx" path="res://Scenes/Parts/health_potion.tscn" id="5_n8gl3"]
+[ext_resource type="PackedScene" uid="uid://bwnao0ihfbc00" path="res://Scenes/Parts/gold.tscn" id="6_r04gs"]
 
 [node name="Main" type="Node2D"]
 
@@ -12,18 +14,17 @@ position = Vector2(638, 79)
 
 [node name="Miscellaneus" type="Node2D" parent="."]
 
-[node name="Boulder" parent="Miscellaneus" instance=ExtResource("2_n8gl3")]
-position = Vector2(1, 0)
-offset = Vector2(0, 343)
+[node name="Node2D" parent="Miscellaneus" instance=ExtResource("2_n8gl3")]
+position = Vector2(334, 388)
 
-[node name="Boulder2" parent="Miscellaneus" instance=ExtResource("2_n8gl3")]
-position = Vector2(402, 129)
+[node name="Node2D2" parent="Miscellaneus" instance=ExtResource("2_n8gl3")]
+position = Vector2(430, 138)
 
-[node name="Boulder3" parent="Miscellaneus" instance=ExtResource("2_n8gl3")]
-position = Vector2(396, 353)
+[node name="Node2D3" parent="Miscellaneus" instance=ExtResource("2_n8gl3")]
+position = Vector2(878, 159.00002)
 
-[node name="Boulder4" parent="Miscellaneus" instance=ExtResource("2_n8gl3")]
-position = Vector2(741, 259)
+[node name="Node2D4" parent="Miscellaneus" instance=ExtResource("2_n8gl3")]
+position = Vector2(846, 451)
 
 [node name="Limits_Arena" parent="Miscellaneus" instance=ExtResource("3_r04gs")]
 position = Vector2(610, 286)
@@ -43,3 +44,20 @@ scale = Vector2(1, -1)
 [node name="Arena_Block4" parent="Miscellaneus" instance=ExtResource("4_2c4sm")]
 position = Vector2(151, 496)
 rotation = 3.1415927
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="HealthPotion" parent="Node2D" instance=ExtResource("5_n8gl3")]
+position = Vector2(627, 234)
+
+[node name="Gold" parent="Node2D" instance=ExtResource("6_r04gs")]
+position = Vector2(964, 293)
+
+[node name="HealthPotion2" parent="Node2D" instance=ExtResource("5_n8gl3")]
+position = Vector2(265, 154)
+
+[node name="HealthPotion3" parent="Node2D" instance=ExtResource("5_n8gl3")]
+position = Vector2(295, 294)
+
+[node name="Gold2" parent="Node2D" instance=ExtResource("6_r04gs")]
+position = Vector2(599, 425)

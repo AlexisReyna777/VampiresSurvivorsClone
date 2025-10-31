@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cyvjeu7j5wrkd"]
+[gd_scene load_steps=10 format=3 uid="uid://cyvjeu7j5wrkd"]
 
 [ext_resource type="PackedScene" uid="uid://4gafysqnjytj" path="res://Scenes/Parts/player.tscn" id="1_382gn"]
 [ext_resource type="PackedScene" uid="uid://bo233jc4of80j" path="res://Scenes/Parts/boulder.tscn" id="2_n8gl3"]
@@ -6,13 +6,23 @@
 [ext_resource type="PackedScene" uid="uid://tov5ihlkglhk" path="res://Scenes/Parts/arena_block.tscn" id="4_2c4sm"]
 [ext_resource type="PackedScene" uid="uid://bmj2s2me7bflx" path="res://Scenes/Parts/health_potion.tscn" id="5_n8gl3"]
 [ext_resource type="PackedScene" uid="uid://bwnao0ihfbc00" path="res://Scenes/Parts/gold.tscn" id="6_r04gs"]
+[ext_resource type="PackedScene" uid="uid://1lb5gy23ij4y" path="res://Scenes/Parts/enemy.tscn" id="7_2c4sm"]
+[ext_resource type="PackedScene" uid="uid://c8ylmknj1msnv" path="res://Scenes/Parts/entity_spawner.tscn" id="8_je8cj"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_r04gs"]
+vertices = PackedVector2Array(295, 645, 978, 638, 1250, 638, 1452.0938, 753.7969, 623.0625, 961.0625, -206.22656, 749.84375, 1452.0391, -151.53125, 1610.2188, 306.8828, 1284.9297, 344.35156, 1243.9297, 182.64844, 1209, -5.2109375, 1209, -111, 610.9219, -347.21094, 937, -111, 1250, 532.21094, 23, 645, 1130.5703, 315.65625, 1089.5703, 211.34375, 522.27344, 185.5, 775.28125, 423.0703, 753.72656, 498.5, 426.27344, 435.5, 404.8672, 360.59375, 970.27344, 206.5, 1055.8594, 30, 916.8672, 423.59375, 948.8672, 131.59375, 937, 30, 882.71094, 95.96094, 842.4297, 104.02344, 317, 14, 317, -127, 832.9531, 118.22656, 807.28125, 131.07031, -11.9296875, 351.35156, 23, 539.21094, -368.85938, 303.54688, -178.07031, -168.20313, 785.72656, 206.5, 434.71094, 74.96094, 938.27344, 498.5, 978, 497, 295, 504, 241.72656, 435.5, 176.14063, 504, 142.42969, 322.65625, 263.28125, 360.0703, 45, -127, 10.0703125, 166.64844, 359.28125, 110.07031, 164.42969, 195.34375, 198.14063, 14, 394.4297, 83.02344, 384.95313, 97.22656, 1096.8594, 497, 850.71094, 387.96094, 810.4297, 396.02344, 500.8672, 110.59375, 800.9531, 410.22656, 337.72656, 185.5, 338.71094, 324.96094, 298.4297, 333.02344, 288.95313, 347.22656, 45, -21.210938)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 3, 8, 9, 10, 11), PackedInt32Array(12, 6, 11, 13), PackedInt32Array(14, 8, 3, 2), PackedInt32Array(15, 0, 5), PackedInt32Array(9, 8, 16, 17), PackedInt32Array(18, 19, 20, 21, 22), PackedInt32Array(23, 24, 17, 25), PackedInt32Array(24, 23, 26, 27), PackedInt32Array(27, 26, 28), PackedInt32Array(12, 13, 27, 28, 29, 30, 31), PackedInt32Array(30, 29, 32, 33), PackedInt32Array(34, 35, 15, 5, 36, 37), PackedInt32Array(30, 33, 38, 39), PackedInt32Array(40, 41, 1, 0), PackedInt32Array(20, 40, 0), PackedInt32Array(21, 20, 0, 42), PackedInt32Array(43, 21, 42, 44), PackedInt32Array(43, 44, 45, 46), PackedInt32Array(37, 12, 31, 47), PackedInt32Array(34, 37, 47, 48), PackedInt32Array(49, 50, 51, 30, 52, 53), PackedInt32Array(16, 54, 41, 25, 17), PackedInt32Array(41, 40, 25), PackedInt32Array(23, 25, 55, 38), PackedInt32Array(38, 55, 56, 18, 57), PackedInt32Array(18, 56, 58, 19), PackedInt32Array(59, 18, 22, 60), PackedInt32Array(59, 60, 61, 45), PackedInt32Array(62, 46, 45, 61), PackedInt32Array(49, 59, 45, 34, 50), PackedInt32Array(47, 63, 48), PackedInt32Array(34, 48, 50), PackedInt32Array(39, 52, 30), PackedInt32Array(39, 38, 57)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(611, -378, 1475, -177, 1642, 307, 1475, 779, 623, 992, -229, 775, -401, 303, -200, -194)])
+parsed_geometry_type = 1
+source_geometry_mode = 1
+agent_radius = 30.0
 
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_382gn")]
 position = Vector2(638, 79)
 
-[node name="Miscellaneus" type="Node2D" parent="."]
+[node name="Miscellaneus" type="Node2D" parent="." groups=["navigation_polygon_source_geometry_group"]]
 
 [node name="Node2D" parent="Miscellaneus" instance=ExtResource("2_n8gl3")]
 position = Vector2(334, 388)
@@ -61,3 +71,38 @@ position = Vector2(295, 294)
 
 [node name="Gold2" parent="Node2D" instance=ExtResource("6_r04gs")]
 position = Vector2(599, 425)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." groups=["navigation_polygon_source_geometry_group"]]
+navigation_polygon = SubResource("NavigationPolygon_r04gs")
+
+[node name="Enemy" parent="." instance=ExtResource("7_2c4sm")]
+position = Vector2(668, -230)
+
+[node name="EnemySpawner" parent="." instance=ExtResource("8_je8cj")]
+position = Vector2(-202, 460)
+
+[node name="Marker2D" type="Marker2D" parent="EnemySpawner/Positions" index="0"]
+position = Vector2(1475, 285)
+
+[node name="Marker2D2" type="Marker2D" parent="EnemySpawner/Positions" index="1"]
+position = Vector2(1495, -591)
+
+[node name="Marker2D3" type="Marker2D" parent="EnemySpawner/Positions" index="2"]
+position = Vector2(616, -684)
+
+[node name="Marker2D4" type="Marker2D" parent="EnemySpawner/Positions" index="3"]
+position = Vector2(1657, -231)
+
+[node name="Marker2D5" type="Marker2D" parent="EnemySpawner/Positions" index="4"]
+position = Vector2(105, -499)
+
+[node name="Marker2D6" type="Marker2D" parent="EnemySpawner/Positions" index="5"]
+position = Vector2(106, 217)
+
+[node name="Marker2D7" type="Marker2D" parent="EnemySpawner/Positions" index="6"]
+position = Vector2(736, 336)
+
+[node name="Marker2D8" type="Marker2D" parent="EnemySpawner/Positions" index="7"]
+position = Vector2(20, -257)
+
+[editable path="EnemySpawner"]

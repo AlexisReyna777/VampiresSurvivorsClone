@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8ylmknj1msnv"]
+
+[ext_resource type="Script" uid="uid://dfixrmkwesisw" path="res://Scripts/entity_spawner.gd" id="1_84wdg"]
+[ext_resource type="PackedScene" uid="uid://1lb5gy23ij4y" path="res://Scenes/Parts/enemy.tscn" id="2_85odt"]
+
+[node name="EntitySpawner" type="Node2D"]
+script = ExtResource("1_84wdg")
+entity_scene = ExtResource("2_85odt")
+
+[node name="Positions" type="Node2D" parent="."]
+
+[node name="SpawnTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

@@ -49,3 +49,5 @@ func update_health():
 func add_health(difference: int):
 	health += difference
 	
+func get_hit():
+	health -= 1
